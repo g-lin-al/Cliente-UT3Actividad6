@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 4</title>
+</head>
+<body>
+    <p id="dado_1"></p>
+    <p id="dado_2"></p>
+
+    <script>
+        function lanzarDados() {
+            let resultado1 = Math.round(Math.random() * (6 - 1) + 1);
+            let resultado2 = Math.round(Math.random() * (6 - 1) + 1);
+            document.getElementById("dado_1").innerHTML = `Tirada del primer dado: ${resultado1}`;
+            document.getElementById("dado_2").innerHTML = `Tirada del segundo dado: ${resultado2}`;
+        }
+
+        setInterval(lanzarDados, 5000);
+    </script>
+</body>
+</html>
