@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 2</title>
+</head>
+<body>
+    <ol>
+        <li>¿Cuál es tu color favorito?</li>
+        <input type="radio" name="color_fav" id="rojo" /><label for="rojo" class="color_fav">Rojo</label><br>
+        <input type="radio" name="color_fav" id="azul" /><label for="azul" class="color_fav">Azul</label><br>
+        <input type="radio" name="color_fav" id="verde" /><label for="verde" class="color_fav">Verde</label><br>
+        <li>¿Cuál es tu animal favorito?</li>
+        <input type="radio" name="animal_fav" id="perro" /><label for="perro" class="animal_fav">Perro</label><br>
+        <input type="radio" name="animal_fav" id="gato" /><label for="gato" class="animal_fav">Gato</label><br>
+        <input type="radio" name="animal_fav" id="ave" /><label for="ave" class="animal_fav">Ave</label><br>
+    </ol>
+    <button onclick="verResultados()">Ver resultado</button>
+    <p id="resultados"></p>
+
+    <script>
+        function verResultados() {
+            let color_var = "", animal_var = "";
+            color_var = document.getElementsByClassName("color_fav").innerHTML;
+            animal_var = document.getElementsByClassName("animal_fav").innerHTML;
+            
+            document.getElementById("resultados").innerHTML = `Tu color favorito es: ${color_var}<br>Tu animal favorito es: ${animal_var}`;
+        }
+    </script>
+</body>
+</html>

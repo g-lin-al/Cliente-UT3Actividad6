@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 3</title>
+    <style>
+        #caja {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="caja"></div>
+    </div>
+    <script>
+        let paso_px = 0, paso_ms = 10;
+        
+        function moverCaja() {
+            document.getElementById("caja").style.left = (String(paso_px) + "px");
+            paso_px++;
+        }
+
+        setInterval(moverCaja(), paso_ms);
+    </script>
+</body>
+</html>

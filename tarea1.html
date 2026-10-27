@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 1</title>
+    <style>
+        #parrafo {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <input type="color" name="input_color" id="input_color" />
+    <button onclick="cambiarColor()">Cambiar</button>
+    <p id="parrafo">Texto para cambiar de color.</p>
+
+    <script>
+        function cambiarColor() {
+            let color_var = "";
+            color_var = document.getElementById("input_color").value;
+
+            document.getElementById("parrafo").style.color = color_var;
+        }
+    </script>
+</body>
+</html>
