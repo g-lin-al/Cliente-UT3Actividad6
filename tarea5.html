@@ -4,8 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tarea 5</title>
+    <style>
+        p {
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <p id="reloj">0</p>
+
+    <script>
+        let segundo = 0;
+
+        function avanzarSegundos(segundos) {
+            let color_num = 0;
+
+            color_num = Math.round(Math.random() * (999999));
+            document.getElementById("reloj").style.backgroundColor = "#"+color_num;
+            document.getElementById("reloj").innerHTML = segundos;
+            segundos++;
+        }
+
+        setInterval(avanzarSegundos(segundo), 1000);
+
+    </script>
 </body>
 </html>
